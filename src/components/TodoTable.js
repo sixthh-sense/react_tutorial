@@ -4,11 +4,11 @@ function TodoTable(props) {
     return (
         <table className="table table-hover">
             <thead>
-            <tr>
-                <th scope='col'>#</th>
-                <th scope='col'>Description</th>
-                <th scope='col'>Assigned</th>
-            </tr>
+                <tr>
+                    <th scope='col'>#</th>
+                    <th scope='col'>Description</th>
+                    <th scope='col'>Assigned</th>
+                </tr>
             </thead>
             <tbody>
                 {props.todos.map(todo => (
@@ -17,6 +17,7 @@ function TodoTable(props) {
                         rowNumber={todo.rowNumber}
                         rowDescription={todo.rowDescription}
                         rowAssigned={todo.rowAssigned}
+                        deleteTodo={props.deleteTodo}
                     />
                 ))}
             </tbody>
