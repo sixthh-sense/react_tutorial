@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useState} from 'react';
 
-function NewTodoForm(props) {
+function NewTodoForm(props: { addTodo: (arg0: string, arg1: string) => void; }) {
 
     const [description, setDescription] = useState('');
     const [assigned, setAssigned] = useState('');
